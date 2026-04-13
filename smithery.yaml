@@ -1,0 +1,10 @@
+name: faker-ai-mcp
+description: "MEOK AI Labs — faker-ai-mcp"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/faker-ai-mcp
+license: MIT
+categories: [Testing, Data Generation]
+tags: [fake-data, test-data, mock-data, data-generation, synthetic-data]
+runtime: python
+entrypoint: server.py
