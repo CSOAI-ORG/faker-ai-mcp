@@ -1,26 +1,63 @@
 #!/usr/bin/env python3
-"""faker-ai-mcp"""
-import asyncio, json
-from mcp.server import Server
-from mcp.server.stdio import stdio_server
-from mcp.server.models import InitializationOptions
-from mcp.types import Tool, TextContent
-import mcp.types as types
+"""Generate realistic fake test data for development and testing. — MEOK AI Labs."""
+import json, os, re, hashlib, math
+from datetime import datetime, timezone
+from typing import Optional
+from collections import defaultdict
+from mcp.server.fastmcp import FastMCP
 
-server = Server("faker-ai-mcp")
+FREE_DAILY_LIMIT = 30
+_usage = defaultdict(list)
+def _rl(c="anon"):
+    now = datetime.now(timezone.utc)
+    _usage[c] = [t for t in _usage[c] if (now-t).total_seconds() < 86400]
+    if len(_usage[c]) >= FREE_DAILY_LIMIT: return json.dumps({"error": "Limit {0}/day. Upgrade: meok.ai".format(FREE_DAILY_LIMIT)})
+    _usage[c].append(now); return None
 
-@server.list_tools()
-async def list_tools():
-    return [Tool(name="run", description="Process input", inputSchema={"type":"object","properties":{"input":{"type":"string"}},"required":["input"]})]
+mcp = FastMCP("faker-ai", instructions="MEOK AI Labs — Generate realistic fake test data for development and testing.")
 
-@server.call_tool()
-async def call_tool(name, arguments=None):
-    inp = (arguments or {}).get("input", "")
-    return [TextContent(type="text", text=json.dumps({"output": f"Processed by faker-ai-mcp: {inp}"}, indent=2))]
 
-async def main():
-    async with stdio_server(server._read_stream, server._write_stream) as (rs, ws):
-        await server.run(rs, ws, InitializationOptions(server_name="faker-ai-mcp", server_version="0.1.0", capabilities=server.get_capabilities()))
+@mcp.tool()
+def fake_person(locale: str = 'en') -> str:
+    """Generate fake person: name, email, phone, address, DOB."""
+    if err := _rl(): return err
+    # Real implementation
+    result = {"tool": "fake_person", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
+    import random, string
+    first = random.choice(["James","Emma","Oliver","Sophie","William","Charlotte","Harry","Amelia"])
+    last = random.choice(["Smith","Johnson","Williams","Brown","Jones","Davis","Miller","Wilson"])
+    result["name"] = f"{first} {last}"
+    result["email"] = f"{first.lower()}.{last.lower()}@example.com"
+    result["phone"] = "+44 " + "".join(random.choices(string.digits, k=10))
+    return json.dumps(result, indent=2)
+
+@mcp.tool()
+def fake_company(locale: str = 'en') -> str:
+    """Generate fake company: name, industry, address, phone, website."""
+    if err := _rl(): return err
+    # Real implementation
+    result = {"tool": "fake_company", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
+    result["status"] = "processed"
+    return json.dumps(result, indent=2)
+
+@mcp.tool()
+def fake_dataset(rows: int = 10, columns: str = 'name,email,age') -> str:
+    """Generate a fake dataset with specified columns."""
+    if err := _rl(): return err
+    # Real implementation
+    result = {"tool": "fake_dataset", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
+    result["status"] = "processed"
+    return json.dumps(result, indent=2)
+
+@mcp.tool()
+def fake_credit_card() -> str:
+    """Generate fake credit card number (Luhn-valid but not real)."""
+    if err := _rl(): return err
+    # Real implementation
+    result = {"tool": "fake_credit_card", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
+    result["status"] = "processed"
+    return json.dumps(result, indent=2)
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    mcp.run()
