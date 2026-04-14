@@ -1,10 +1,28 @@
 name: faker-ai-mcp
-description: "MEOK AI Labs — faker-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/faker-ai-mcp
-license: MIT
-categories: [Testing, Data Generation]
-tags: [fake-data, test-data, mock-data, data-generation, synthetic-data]
-runtime: python
-entrypoint: server.py
+description: "faker-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: fake_person
+  description: 'Generate fake person: name, email, phone, address, DOB.'
+  parameters:
+  - name: locale
+    type: string
+    required: false
+- name: fake_company
+  description: 'Generate fake company: name, industry, address, phone, website.'
+  parameters:
+  - name: locale
+    type: string
+    required: false
+- name: fake_dataset
+  description: Generate a fake dataset with specified columns.
+  parameters:
+  - name: rows
+    type: integer
+    required: false
+  - name: columns
+    type: string
+    required: false
+- name: fake_credit_card
+  description: Generate fake credit card number (Luhn-valid but not real).
+  parameters: []

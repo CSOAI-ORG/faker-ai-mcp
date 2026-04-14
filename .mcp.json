@@ -1,20 +1,58 @@
 {
   "name": "faker-ai-mcp",
-  "description": "MEOK AI Labs \u2014 faker-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/faker-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "faker-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Testing",
-    "Data Generation"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "fake_person",
+      "description": "Generate fake person: name, email, phone, address, DOB.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "fake_company",
+      "description": "Generate fake company: name, industry, address, phone, website.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "fake_dataset",
+      "description": "Generate a fake dataset with specified columns.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "integer"
+          },
+          "columns": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "fake_credit_card",
+      "description": "Generate fake credit card number (Luhn-valid but not real).",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
 }
