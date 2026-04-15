@@ -1,6 +1,6 @@
 {
   "name": "faker-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Generate realistic fake test data for development and testing.",
+  "description": "MCP server for faker ai. Features fake person, fake company, fake dataset. From MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
