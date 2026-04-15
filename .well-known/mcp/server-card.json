@@ -1,0 +1,58 @@
+{
+  "name": "faker-ai",
+  "description": "MEOK AI Labs \u2014 Generate realistic fake test data for development and testing.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/faker-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_fake_data",
+      "description": "Generate fake data of a specified type (person, company, address, email, phone). Returns 1-50 records."
+    },
+    {
+      "name": "generate_profile",
+      "description": "Generate a complete fake user profile with name, contact, address, employment, and bio."
+    },
+    {
+      "name": "generate_address",
+      "description": "Generate realistic fake addresses with street, city, postcode, and country."
+    },
+    {
+      "name": "generate_company",
+      "description": "Generate a fake company with name, industry, address, registration, and financial details."
+    },
+    {
+      "name": "generate_dataset",
+      "description": "Generate a tabular fake dataset with specified columns. Supports: name, email, age, phone, city, company, date, amount."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Data & Analytics",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
