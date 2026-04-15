@@ -1,5 +1,6 @@
 name: faker-ai-mcp
-description: "faker-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: "MEOK AI Labs \u2014 Generate realistic fake test data for development\
+  \ and testing."
 version: 1.0.0
 tools:
 - name: fake_person
