@@ -1,33 +1,38 @@
-# Faker AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Generate realistic fake test data for development and testing
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/faker-ai-mcp)](https://github.com/CSOAI-ORG/faker-ai-mcp/stargazers)
+
+# ufakerU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/faker-ai-mcp)](https://www.npmjs.com/package/@meok-ai/faker-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/faker-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install faker-ai-mcp
+# or
+npm install -g @meok-ai/faker-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `fake_person`
-Generate fake person data: name, email, phone, address, date of birth.
-
-**Parameters:**
-- `locale` (str): Locale for name generation (default 'en')
-
-Additional tools for generating fake companies, addresses, credit cards, and bulk datasets. See `server.py` for the full catalog.
-
-## Authentication
-
-Free tier: 30 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
