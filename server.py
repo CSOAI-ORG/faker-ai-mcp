@@ -65,7 +65,22 @@ def _luhn_checksum(partial: str) -> str:
 @mcp.tool()
 def generate_fake_data(data_type: str = "person", count: int = 1, locale: str = "en",
                        api_key: str = "") -> str:
-    """Generate fake data of a specified type (person, company, address, email, phone). Returns 1-50 records."""
+    """Generate fake data of a specified type (person, company, address, email, phone). Returns 1-50 records.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -100,7 +115,22 @@ def generate_fake_data(data_type: str = "person", count: int = 1, locale: str = 
 
 @mcp.tool()
 def generate_profile(locale: str = "en", include_avatar: bool = False, api_key: str = "") -> str:
-    """Generate a complete fake user profile with name, contact, address, employment, and bio."""
+    """Generate a complete fake user profile with name, contact, address, employment, and bio.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -133,7 +163,22 @@ def generate_profile(locale: str = "en", include_avatar: bool = False, api_key: 
 
 @mcp.tool()
 def generate_address(locale: str = "en", count: int = 1, api_key: str = "") -> str:
-    """Generate realistic fake addresses with street, city, postcode, and country."""
+    """Generate realistic fake addresses with street, city, postcode, and country.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -158,7 +203,22 @@ def generate_address(locale: str = "en", count: int = 1, api_key: str = "") -> s
 
 @mcp.tool()
 def generate_company(locale: str = "en", api_key: str = "") -> str:
-    """Generate a fake company with name, industry, address, registration, and financial details."""
+    """Generate a fake company with name, industry, address, registration, and financial details.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -189,7 +249,22 @@ def generate_company(locale: str = "en", api_key: str = "") -> str:
 @mcp.tool()
 def generate_dataset(rows: int = 10, columns: str = "name,email,age", locale: str = "en",
                      api_key: str = "") -> str:
-    """Generate a tabular fake dataset with specified columns. Supports: name, email, age, phone, city, company, date, amount."""
+    """Generate a tabular fake dataset with specified columns. Supports: name, email, age, phone, city, company, date, amount.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
