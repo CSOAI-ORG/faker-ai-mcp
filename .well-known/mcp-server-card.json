@@ -1,0 +1,28 @@
+{
+  "name": "faker-ai-mcp",
+  "title": "Faker Ai Mcp",
+  "description": "MCP server for faker ai. Features fake person, fake company, fake dataset. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_fake_data"
+    },
+    {
+      "name": "generate_profile"
+    },
+    {
+      "name": "generate_address"
+    },
+    {
+      "name": "generate_company"
+    },
+    {
+      "name": "generate_dataset"
+    }
+  ]
+}

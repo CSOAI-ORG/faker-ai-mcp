@@ -1,0 +1,36 @@
+# faker-ai-mcp
+# **MCP server for faker ai mcp operations**
+
+## Install
+```bash
+pip install faker-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `generate_fake_data`
+Generate fake data of a specified type (person, company, address, email, phone). Returns 1-50 records.
+
+### `generate_profile`
+Generate a complete fake user profile with name, contact, address, employment, and bio.
+
+### `generate_address`
+Generate realistic fake addresses with street, city, postcode, and country.
+
+### `generate_company`
+Generate a fake company with name, industry, address, registration, and financial details.
+
+### `generate_dataset`
+Generate a tabular fake dataset with specified columns. Supports: name, email, age, phone, city, company, date, amount.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

@@ -1,0 +1,9 @@
+# faker-ai-mcp - Auto-trigger Rules
+
+When the user asks about faker, use faker-ai-mcp tools: generate_fake_data, generate_profile, generate_address, generate_company, generate_dataset
+
+**MCP server for faker ai mcp operations**
+
+Install: `pip install faker-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

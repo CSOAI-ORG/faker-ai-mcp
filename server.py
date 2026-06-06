@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Generate realistic fake test data for development and testing. — MEOK AI Labs."""
+"""
+Generate realistic fake test data for development and testing. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, random, string, hashlib
@@ -104,7 +104,7 @@ def generate_fake_data(data_type: str = "person", count: int = 1, locale: str = 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     count = max(1, min(count, 50))
@@ -174,7 +174,7 @@ def generate_profile(locale: str = "en", include_avatar: bool = False, api_key: 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     first = random.choice(FIRST_NAMES.get(locale, FIRST_NAMES["en"]))
@@ -242,7 +242,7 @@ def generate_address(locale: str = "en", count: int = 1, api_key: str = "") -> s
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     count = max(1, min(count, 50))
@@ -301,7 +301,7 @@ def generate_company(locale: str = "en", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     name = f"{random.choice(LAST_NAMES.get(locale, LAST_NAMES['en']))} {random.choice(COMPANY_SUFFIXES)}"
@@ -370,7 +370,7 @@ def generate_dataset(rows: int = 10, columns: str = "name,email,age", locale: st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     rows = max(1, min(rows, 100))
@@ -411,5 +411,8 @@ def generate_dataset(rows: int = 10, columns: str = "name,email,age", locale: st
             "timestamp": datetime.now(timezone.utc).isoformat()}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
