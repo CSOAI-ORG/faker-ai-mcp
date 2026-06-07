@@ -1,0 +1,68 @@
+{
+  "name": "faker-ai-mcp",
+  "description": "Faker Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/faker-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_fake_data",
+      "name": "Generate Fake Data",
+      "description": "generate_fake_data via faker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_profile",
+      "name": "Generate Profile",
+      "description": "generate_profile via faker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_address",
+      "name": "Generate Address",
+      "description": "generate_address via faker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_company",
+      "name": "Generate Company",
+      "description": "generate_company via faker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_dataset",
+      "name": "Generate Dataset",
+      "description": "generate_dataset via faker-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "faker-ai-mcp",
+    "description": "Faker Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "faker-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_fake_data",
+      "generate_profile",
+      "generate_address",
+      "generate_company",
+      "generate_dataset"
+    ]
+  }
+}
