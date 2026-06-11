@@ -27,3 +27,15 @@ tools:
 - name: fake_credit_card
   description: Generate fake credit card number (Luhn-valid but not real).
   parameters: []
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+    - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: Your MEOK API Key
+  commandFunction: "(config) => ({\n  command: 'uvx',\n  args: ['faker-ai-mcp', '--api-key',\
+    \ config.apiKey],\n  env: {\n    MEOK_API_KEY: config.apiKey\n  }\n})"
